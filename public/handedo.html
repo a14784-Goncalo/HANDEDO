@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HANDEDO</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+</head>
+
+<body class="app-body">
+
+    <div class="top-bar">
+
+        <a href="index.html">
+            <button class="back-btn">⬅ Voltar</button>
+        </a>
+
+        <h2>Contador de Dedos</h2>
+
+    </div>
+
+    <div id="container">
+
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="canvas"></canvas>
+
+    </div>
+
+    <h2 id="result">Dedos: 0</h2>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -3,33 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>HANDEDO</title>
+    <title>HANDEDO MENU</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <!-- MEDIA PIPE (CORRETO) -->
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands_solution_packed_assets_loader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
-
 </head>
 
-<body>
+<body class="menu-body">
 
-    <h1>HANDEDO</h1>
+    <div class="menu-container">
 
-    <div id="container">
+        <h1>🤖 HANDEDO</h1>
 
-        <video id="video" autoplay playsinline muted></video>
+        <p>Escolhe uma opção</p>
 
-        <canvas id="canvas"></canvas>
+        <a href="handedo.html">
+            <button class="btn">
+                ✋ Contador de Dedos
+            </button>
+        </a>
+        <a href="challenge.html">
+            <button class="btn">
+                🎮 Desafio de Dedos
+            </button>
+        </a>
 
     </div>
-
-    <h2 id="result">Dedos: 0</h2>
-
-    <script src="script.js"></script>
 
 </body>
 

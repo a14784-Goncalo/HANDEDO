@@ -1,4 +1,47 @@
-body {
+/* ===================== */
+/* MENU */
+/* ===================== */
+
+.menu-body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container {
+    text-align: center;
+}
+
+.menu-container h1 {
+    font-size: 40px;
+    color: #00ff88;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #00ff88;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* ===================== */
+/* APP HANDEDO */
+/* ===================== */
+
+.app-body {
     margin: 0;
     font-family: Arial;
     background: #0f0f0f;
@@ -6,24 +49,30 @@ body {
     text-align: center;
 }
 
-h1 {
-    color: #00ff88;
-    font-size: 24px;
-    margin: 10px 0;
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-/* container responsivo */
+.back-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ff4444;
+    color: white;
+    cursor: pointer;
+}
+
 #container {
     position: relative;
     width: 100%;
     max-width: 900px;
     margin: auto;
-
-    /* mantém proporção tipo vídeo */
     aspect-ratio: 4 / 3;
 }
 
-/* vídeo e canvas iguais */
 video, canvas {
     position: absolute;
     width: 100%;
@@ -34,20 +83,7 @@ video, canvas {
     border-radius: 12px;
 }
 
-/* resultado */
 #result {
-    font-size: 20px;
     margin-top: 10px;
-}
-
-/* mobile ajustes */
-@media (max-width: 600px) {
-
-    h1 {
-        font-size: 20px;
-    }
-
-    #result {
-        font-size: 18px;
-    }
+    font-size: 22px;
 }

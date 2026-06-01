@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HANDEDO CHALLENGE</title>
+
+    <link rel="stylesheet" href="challenge.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+</head>
+
+<body>
+
+    <h1>🎮 HANDEDO CHALLENGE</h1>
+
+    <h2 id="gameText">Carrega START</h2>
+
+    <button onclick="startGame()">START</button>
+
+    <div id="statusBox">Esperando...</div>
+
+    <div id="container">
+
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="canvas"></canvas>
+
+    </div>
+
+    <script src="challenge.js"></script>
+
+</body>
+
+</html>
