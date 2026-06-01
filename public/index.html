@@ -7,26 +7,27 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- MEDIA PIPE (CORRETO) -->
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands_solution_packed_assets_loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
 </head>
 
 <body>
 
     <h1>HANDEDO</h1>
 
-    <video id="video" autoplay></video>
+    <div id="container">
 
-    <br><br>
+        <video id="video" autoplay playsinline muted></video>
 
-    <button id="captureBtn">
-        Capturar
-    </button>
+        <canvas id="canvas"></canvas>
 
-    <h2 id="result">
-        Dedos: 0
-    </h2>
+    </div>
+
+    <h2 id="result">Dedos: 0</h2>
 
     <script src="script.js"></script>
 
