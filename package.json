@@ -1,0 +1,29 @@
+{
+  "name": "handedo",
+  "version": "1.0.0",
+  "description": "Projeto de Node JS para capturar quantos dedos estão levantados em uma mão.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a14784-Goncalo/HANDEDO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/a14784-Goncalo/HANDEDO/issues"
+  },
+  "homepage": "https://github.com/a14784-Goncalo/HANDEDO#readme",
+  "dependencies": {
+    "@mediapipe/camera_utils": "^0.3.1675466862",
+    "@mediapipe/drawing_utils": "^0.3.1675466124",
+    "@mediapipe/hands": "^0.4.1675469240",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "multer": "^2.1.1"
+  }
+}
