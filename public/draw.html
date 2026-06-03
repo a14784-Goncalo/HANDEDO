@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HANDEDO - Desenho</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+
+    <style>
+        #draw-canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            pointer-events: none;
+            border-radius: 12px;
+        }
+
+        #status-bar {
+            margin-top: 10px;
+            font-size: 22px;
+            min-height: 36px;
+            transition: color 0.2s;
+        }
+
+        #mode-indicator {
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            z-index: 20;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 6px 14px;
+            border-radius: 8px;
+            background: rgba(0,0,0,0.6);
+            color: #aaa;
+            pointer-events: none;
+        }
+
+        #mode-indicator.drawing {
+            color: #00ff88;
+            background: rgba(0,255,136,0.15);
+        }
+
+        #mode-indicator.erasing {
+            color: #ff4444;
+            background: rgba(255,68,68,0.15);
+        }
+
+        #clear-btn {
+            margin-top: 10px;
+            padding: 10px 22px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #ff4444;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #clear-btn:hover {
+            transform: scale(1.07);
+        }
+
+        .color-picker {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .color-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            cursor: pointer;
+            transition: border 0.2s, transform 0.2s;
+        }
+
+        .color-btn.active {
+            border-color: white;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body class="app-body">
+
+    <div class="top-bar">
+        <a href="index.html">
+            <button class="back-btn">⬅ Voltar</button>
+        </a>
+        <h2>✏️ Desenho com a Mão</h2>
+    </div>
+
+    <div id="container">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="canvas"></canvas>
+        <canvas id="draw-canvas"></canvas>
+        <div id="mode-indicator">✋ Nenhuma mão</div>
+    </div>
+
+    <div id="status-bar">☝️ 1 dedo = desenha &nbsp;|&nbsp; ✊ Mão fechada = apaga</div>
+
+    <div class="color-picker" id="colorPicker"></div>
+
+    <button id="clear-btn" onclick="clearDrawing()">🗑️ Limpar Tudo</button>
+
+    <script src="draw.js"></script>
+
+</body>
+
+</html>
